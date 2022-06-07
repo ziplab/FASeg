@@ -12,7 +12,7 @@
 
 ### Introduction:
 
-We have proposed a simple yet effective query design for semantic segmentation under DETR-like frameworks, that the **positional queries are aggregated from previous cross-attention scores and the localization infromation** of the preceding layer.
+We have proposed a simple yet effective query design for semantic segmentation under DETR-like frameworks, that the **positional queries are aggregated from previous cross-attention scores and the localization infromation** of the preceding layer. Therefore, each query is aware of its previous focus, thus providing more accurate positional guidance and encouraging the cross-attention consistency across the decoder layers.
 
 ![main](pics/main.jpg)
 
