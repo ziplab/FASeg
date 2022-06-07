@@ -14,7 +14,7 @@
 
 We have proposed a simple yet effective query design for semantic segmentation under DETR-like frameworks, that the **positional queries are aggregated from previous cross-attention scores and the localization infromation** of the preceding layer.
 
-![main](/Users/haoyu/PycharmProjects/FASeg/pics/main.jpg)
+![main](pics/main.jpg)
 
 ------
 
