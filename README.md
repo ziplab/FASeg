@@ -6,7 +6,7 @@
 
 ><h3><strong><i>🚀 News</i></strong></h3>
 >
->[2022-06-04]: Release code.
+>[2022-06-07]: Release code.
 
 ***
 
