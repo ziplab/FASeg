@@ -1,0 +1,28 @@
+_BASE_: ../maskformer2_R50_bs16_160k.yaml
+MODEL:
+  BACKBONE:
+    NAME: "D2SwinTransformer"
+  SWIN:
+    EMBED_DIM: 96
+    DEPTHS: [2, 2, 6, 2]
+    NUM_HEADS: [3, 6, 12, 24]
+    WINDOW_SIZE: 7
+    APE: False
+    DROP_PATH_RATE: 0.3
+    PATCH_NORM: True
+  WEIGHTS: "swin_tiny_patch4_window7_224.pkl"
+  PIXEL_MEAN: [123.675, 116.280, 103.530]
+  PIXEL_STD: [58.395, 57.120, 57.375]
+  SEM_SEG_HEAD:
+    NAME: "MaskFormerHeadFASeg"
+    PIXEL_DECODER_NAME: "MSDeformAttnPixelDecoder4ScalesFASeg"
+    DEFORMABLE_TRANSFORMER_ENCODER_IN_FEATURES: ["res3", "res4", "res5"]
+  MASK_FORMER:
+    TRANSFORMER_DECODER_NAME: "MultiScaleMaskedTransformerDecoderFASeg"
+    DEC_LAYERS: 14  #  one for the loss on learnable query, + 12 decoder layers + one extra layer to make prediction from low-resolution features
+DATALOADER:
+    NUM_WORKERS: 2
+SOLVER:
+    IMS_PER_BATCH: 16
+SEED: 5
+OUTPUT_DIR: ./output/sem_swin_tiny_focus_peg
