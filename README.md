@@ -30,7 +30,7 @@ We provide single-seed experimental results and pre-trained models for FASeg:
 
 | Cityscapes val           | Backbone | Crop size | mIoU s.s. (%) | Params. (M) | FLOPs | Model |
 | ------------------------ | -------- | --------- | ------------- | ----------- | ----- | ----- |
-| FASeg w/ conditional K_p | R50      | 1024x2048 | 80.5          | 67M         | 533G  |       |
+| FASeg w/ conditional K_p | R50      | 1024x2048 | 80.5          | 67         | 533G  |       |
 
 Considering the large variance on ADE20k and Cityscapes dataset, we will also report the multi-seed experimental results for FASeg later. The model will be uploaded in a day or two :)
 
