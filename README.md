@@ -28,12 +28,6 @@ We provide single-seed experimental results and pre-trained models for FASeg:
 | FASeg w/ conditional K_p | Swin-T   | 512x512   | 49.6          | 51.3          | 54          | 75G   |       |
 | FASeg w/ conditional K_p | Swin-L   | 640x640   | 56.3          | 57.7          | 228         | 405G  |       |
 
-| Cityscapes val           | Backbone | Crop size | mIoU s.s. (%) | mIoU m.s. (%) | Params. (M) | FLOPs | Model |
-| ------------------------ | -------- | --------- | ------------- | ------------- | ----------- | ----- | ----- |
-| FASeg w/ conditional K_p | R50      | 512x512   | 48.3          | 49.3          | 51          | 72G   |       |
-| FASeg w/ conditional K_p | Swin-T   | 512x512   | 49.6          | 51.3          | 54          | 75G   |       |
-| FASeg w/ conditional K_p | Swin-L   | 640x640   | 56.3          | 57.7          | 228         | 405G  |       |
-
 | Cityscapes val           | Backbone | Crop size | mIoU s.s. (%) | Params. (M) | FLOPs | Model |
 | ------------------------ | -------- | --------- | ------------- | ----------- | ----- | ----- |
 | FASeg w/ conditional K_p | R50      | 1024x2048 | 80.5          | 67M         | 533G  |       |
