@@ -24,15 +24,15 @@ We provide single-seed experimental results and pre-trained models for FASeg:
 
 | ADE20k val               | Backbone | Crop size | mIoU s.s. (%) | mIoU m.s. (%) | Params. (M) | FLOPs | Model |
 | ------------------------ | -------- | --------- | ------------- | ------------- | ----------- | ----- | ----- |
-| FASeg w/ conditional K_p | R50      | 512x512   | 48.3          | 49.3          | 51          | 72G   |       |
-| FASeg w/ conditional K_p | Swin-T   | 512x512   | 49.6          | 51.3          | 54          | 75G   |       |
-| FASeg w/ conditional K_p | Swin-L   | 640x640   | 56.3          | 57.7          | 228         | 405G  |       |
+| FASeg w/ conditional K_p | R50      | 512x512   | 48.3          | 49.3          | 51          | 72G   | [model](https://github.com/ziplab/FASeg/releases/download/V1/ade_faseg_r50.pth) |
+| FASeg w/ conditional K_p | Swin-T   | 512x512   | 49.6          | 51.3          | 54          | 75G   | [model](https://github.com/ziplab/FASeg/releases/download/V1/ade_faseg_swin_ti.pth)|
+| FASeg w/ conditional K_p | Swin-L   | 640x640   | 56.3          | 57.7          | 228         | 405G  | [model](https://github.com/ziplab/FASeg/releases/download/V1/ade_faseg_swin_l.pth)|
 
 | Cityscapes val           | Backbone | Crop size | mIoU s.s. (%) | Params. (M) | FLOPs | Model |
 | ------------------------ | -------- | --------- | ------------- | ----------- | ----- | ----- |
-| FASeg w/ conditional K_p | R50      | 1024x2048 | 80.5          | 67         | 533G  |       |
+| FASeg w/ conditional K_p | R50      | 1024x2048 | 80.5          | 67         | 533G  |[model](https://github.com/ziplab/FASeg/releases/download/V1/cityscapes_faseg_r50.pth)|
 
-Considering the large variance on ADE20k and Cityscapes dataset, we will also report the multi-seed experimental results for FASeg later. The model will be uploaded in a day or two :)
+Considering the large variance on ADE20k and Cityscapes dataset, we will also report the multi-seed experimental results for FASeg later :)
 
 ------
 
