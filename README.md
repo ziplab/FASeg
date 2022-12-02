@@ -7,7 +7,8 @@
 ><h3><strong><i>🚀 News</i></strong></h3>
 >
 >[2022-06-07]: Release code.
->[2022-12-03]: Add more results.
+> 
+>[2022-12-03]: Add Swin-B result.
 ***
 
 ### Introduction:
