@@ -7,7 +7,7 @@
 ><h3><strong><i>🚀 News</i></strong></h3>
 >
 >[2022-06-07]: Release code.
-
+>[2022-12-03]: Add more results.
 ***
 
 ### Introduction:
@@ -26,13 +26,12 @@ We provide single-seed experimental results and pre-trained models for FASeg:
 | ------------------------ | -------- | --------- | ------------- | ------------- | ----------- | ----- | ----- |
 | FASeg w/ conditional K_p | R50      | 512x512   | 48.3          | 49.3          | 51          | 72G   | [model](https://github.com/ziplab/FASeg/releases/download/V1/ade_faseg_r50.pth) |
 | FASeg w/ conditional K_p | Swin-T   | 512x512   | 49.6          | 51.3          | 54          | 75G   | [model](https://github.com/ziplab/FASeg/releases/download/V1/ade_faseg_swin_ti.pth)|
+| FASeg w/ conditional K_p | Swin-B   | 640x640   | 55.0          | 56.0          | 113         | 225G  | [model](https://github.com/ziplab/FASeg/releases/download/V1/ade_faseg_swin_b.pth)|
 | FASeg w/ conditional K_p | Swin-L   | 640x640   | 56.3          | 57.7          | 228         | 405G  | [model](https://github.com/ziplab/FASeg/releases/download/V1/ade_faseg_swin_l.pth)|
 
 | Cityscapes val           | Backbone | Crop size | mIoU s.s. (%) | Params. (M) | FLOPs | Model |
 | ------------------------ | -------- | --------- | ------------- | ----------- | ----- | ----- |
 | FASeg w/ conditional K_p | R50      | 1024x2048 | 80.5          | 67         | 533G  |[model](https://github.com/ziplab/FASeg/releases/download/V1/cityscapes_faseg_r50.pth)|
-
-Considering the large variance on ADE20k and Cityscapes dataset, we will also report the multi-seed experimental results for FASeg later :)
 
 ------
 
@@ -55,6 +54,10 @@ python train_net.py --num-gpus 8 \
 python train_net.py --num-gpus 8 \
   --config-file configs/ade20k/semantic-segmentation/swin/faseg_swin_tiny.yaml
   
+# Train FASeg with Swin-B backbone and 8 GPUs on ADE20k:  
+python train_net.py --num-gpus 8 \
+  --config-file configs/ade20k/semantic-segmentation/swin/faseg_swin_base_IN21k_res640.yaml
+  
 # Train FASeg with Swin-L backbone and 8 GPUs on ADE20k:  
 python train_net.py --num-gpus 8 \
   --config-file configs/ade20k/semantic-segmentation/swin/faseg_swin_large_IN21k_res640.yaml
@@ -75,6 +78,10 @@ python train_net.py --num-gpus 1 \
 python train_net.py --num-gpus 1 \
   --config-file configs/ade20k/semantic-segmentation/swin/faseg_swin_tiny.yaml --eval-only MODEL.WEIGHTS "model/ade_faseg_swin_ti.pth"
   
+# Evaluate FASeg with Swin-B backbone and 1 GPUs on ADE20k val:  
+python train_net.py --num-gpus 1 \
+  --config-file configs/ade20k/semantic-segmentation/swin/faseg_swin_base_IN21k_res640.yaml --eval-only MODEL.WEIGHTS "model/ade_faseg_swin_b.pth"
+
 # Evaluate FASeg with Swin-L backbone and 1 GPUs on ADE20k val:  
 python train_net.py --num-gpus 1 \
   --config-file configs/ade20k/semantic-segmentation/swin/faseg_swin_large_IN21k_res640.yaml --eval-only MODEL.WEIGHTS "model/ade_faseg_swin_l.pth"
