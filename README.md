@@ -1,6 +1,6 @@
 <h1 align="center">Dynamic Focus-aware Positional Queries for Semantic Segmentation</h1>
 
-**This is the official repository for our paper:** [Dynamic Focus-aware Positional Queries for Semantic Segmentation](https://arxiv.org/abs/2204.01244) by [Haoyu He](https://charles-haoyuhe.github.io/), [Jianfei Cai](https://jianfei-cai.github.io/), [Zizheng Pan](https://zizhengpan.github.io/), [Jing liu](https://sites.google.com/view/jing-liu/%E9%A6%96%E9%A1%B5), [Jing Zhang](https://scholar.google.com/citations?user=9jH5v74AAAAJ&hl=en), [Dacheng Tao](https://www.sydney.edu.au/engineering/about/our-people/academic-staff/dacheng-tao.html) and [Bohan Zhuang](https://bohanzhuang.github.io/). 
+**[CVPR 2023] This is the official repository for our paper:** [Dynamic Focus-aware Positional Queries for Semantic Segmentation](https://arxiv.org/abs/2204.01244) by [Haoyu He](https://charles-haoyuhe.github.io/), [Jianfei Cai](https://jianfei-cai.github.io/), [Zizheng Pan](https://zizhengpan.github.io/), [Jing liu](https://sites.google.com/view/jing-liu/%E9%A6%96%E9%A1%B5), [Jing Zhang](https://scholar.google.com/citations?user=9jH5v74AAAAJ&hl=en), [Dacheng Tao](https://www.sydney.edu.au/engineering/about/our-people/academic-staff/dacheng-tao.html) and [Bohan Zhuang](https://bohanzhuang.github.io/). 
 
 ***
 
@@ -99,11 +99,11 @@ For more usage, please see [Getting started with Mask2former](https://github.com
 If you find this repository or our paper useful, please consider cite:
 
 ```
-@article{he2022dynamic,
+@inproceedings{he2023dynamic,
   title={Dynamic Focus-aware Positional Queries for Semantic Segmentation},
   author={He, Haoyu and Cai, Jianfei and Pan, Zizheng and Liu, Jing and Zhang, Jing and Tao, Dacheng and Zhuang, Bohan},
-  journal={arXiv preprint arXiv:2204.01244},
-  year={2022}
+  booktitle={CVPR},
+  year={2023}
 }
 ```
 
